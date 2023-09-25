@@ -20,7 +20,7 @@ FOREIGN KEY (ProductID) REFERENCES SANPHAM(ProductId)
 
 ALTER TABLE HOADON 
 ADD CONSTRAINT NHANVIEN_sID_FK_HOADON
-FOREIGN KEY (SalesID) REFERENCES NHANVIEN(EmID
+FOREIGN KEY (SalesID) REFERENCES NHANVIEN(EmID)
 
 -- BT2: Bạn hãy chuẩn bị dữ liệu bằng cách lấy ra các đơn hàng có ngày lập hoá đơn trước ngày 3/4/2022 (MM/DD/YYYY)
 

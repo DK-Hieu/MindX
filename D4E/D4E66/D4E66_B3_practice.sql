@@ -93,37 +93,24 @@ join STUDENTS s
 on s.sID = l2.sID 
 WHERE l2.score = A.max_score
 
-
--- C1:
-SELECT *
-from LEARNING l
-join STUDENTS s 
-on l.sID = s.sID 
-where l.score >= (select Max(l.score) 'score_max'
-	 		      from LEARNING l)
-
-	 		      
-select min(l.score)
-from LEARNING l 
-	 		      
-SELECT *
-from LEARNING l
-join STUDENTS s 
-on l.sID = s.sID 
-WHERE l.score = (select min(l.score)
-				  from LEARNING l)
 				  
 /* Môn có học viên học điểm thấp nhất là môn nào? Sau đó bạn hãy lấy ra danh sách các học viên học cùng môn đó với học viên có điểm thấp nhất, 
- * và đánh giá sơ bộ nguyên nhân đến từ học viên hay do chất lượng giáo viên? 
- * (Xem hướng dẫn câu 9 ở phần speaker note).
+ * và đánh giá sơ bộ nguyên nhân đến từ học viên hay do chất lượng giáo viên? (Xem hướng dẫn câu 9 ở phần speaker note).
+ * => lý do có thể từ giáo viên
  */
 
 SELECT *
-from LEARNING l
---join COURSE c 
---on l.sID = s.sID 
-where l.score = (select min(l.score) 'score_max'
-	 		     from LEARNING l)
+from STUDENTS s 
+join ENROLLMENTS e  
+on s.sID = e.sID 
+WHERE e.cID in (
+				SELECT cID
+				from LEARNING l
+				where l.score = (select min(l.score) 'score_max'
+					 		     from LEARNING l)
+				)
+
+
 
 
 
