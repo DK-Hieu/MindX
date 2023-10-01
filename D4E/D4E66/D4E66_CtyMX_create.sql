@@ -1,7 +1,10 @@
-CREATE Database test
+DROP DATABASE IF EXISTS CtyMX
+go
+
+CREATE Database CtyMX
 GO;
 
-use test
+use CtyMX
 GO;
 
 /****** Object:  Table [dbo].[HOADON] ******/
