@@ -196,6 +196,39 @@ from SANPHAM s
  * Đề bài : Bạn hãy tìm ra tổng doanh số và tổng số sản phẩm bán được của từng ProductCategoryID
  */
 
+
+select *
+from HOADON h 
+union
+select *
+from HOADONMOI h2 
+
+
+select X.ProductID, sum(X.QTY), sum(X.TotalLine)
+from (
+	select *
+	from HOADON h 
+	union
+	select *
+	from HOADONMOI h2 
+	) as X
+group by X.ProductID 
+
+
+with A as (
+	select *
+	from HOADON h 
+	union
+	select *
+	from HOADONMOI h2
+)
+select A.ProductID, sum(A.QTY), sum(A.TotalLine)
+from A 
+group by A.ProductID
+
+
+
+
 select s.ProductCategoryID , sum(X.QTY) 'QTY' ,sum(X.TotalLine) 'TotalLine'
 from SANPHAM s
 join (select *
@@ -352,3 +385,65 @@ PIVOT (
     SUM(QTY)
     FOR Monthsale IN ([3], [5])
 ) AS PvT;
+
+
+
+select M3.ProductCategoryID, Order_M3, Order_M5,
+from (
+	select s.ProductCategoryID ,sum(X.QTY) 'Order_M3'
+	from SANPHAM s 
+	join (
+		  select *
+		  from HOADON h 
+		  union 
+		  select *
+		  from HOADONMOI h2 
+		 ) as X
+	on s.ProductID = X.ProductID
+	group by s.ProductCategoryID , MONTH (X.DateCreate)
+	having MONTH (X.DateCreate) = 3 ) as M3
+join (
+	select s.ProductCategoryID ,sum(X.QTY) 'Order_M5'
+	from SANPHAM s 
+	join (
+		  select *
+		  from HOADON h 
+		  union 
+		  select *
+		  from HOADONMOI h2 
+		 ) as X
+	on s.ProductID = X.ProductID
+	group by s.ProductCategoryID , MONTH (X.DateCreate)
+	having MONTH (X.DateCreate) = 5 ) as M5
+on M3.ProductCategoryID = M5.ProductCategoryID
+
+
+
+
+with M3M5 as (
+	select s.ProductCategoryID , MONTH (X.DateCreate) 'Month_S', sum(X.QTY) 'QTY'
+	from SANPHAM s 
+	join (
+		  select *
+		  from HOADON h 
+		  union 
+		  select *
+		  from HOADONMOI h2 
+		 ) as X
+	on s.ProductID = X.ProductID
+	group by s.ProductCategoryID , MONTH (X.DateCreate)
+)
+SELECT M3.ProductCategoryID, M3.QTY 'M3', M5.QTY 'M5'
+from M3M5 M3
+join (
+	select *
+	from M3M5
+	WHERE Month_S = 5
+	) as M5
+on M3.ProductCategoryID = M5.ProductCategoryID
+WHERE M3.Month_S = 3
+
+SELECT *
+from M3_M5
+
+
