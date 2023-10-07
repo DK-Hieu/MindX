@@ -1,0 +1,830 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -11.32075558272328,
+    "scrollLeft": -710.9434505950221,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "SANPHAM",
+        "comment": "",
+        "columns": [
+          {
+            "name": "ProductID",
+            "comment": "ID sản phẩm",
+            "dataType": "CHAR(10)",
+            "default": "PK",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.83251953125,
+              "widthComment": 79.68896484375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9f0a7a20-9884-4db8-856c-870b3f108402"
+          },
+          {
+            "name": "ProductName",
+            "comment": "Tên sản phẩm",
+            "dataType": "NVARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 86.59521484375,
+              "widthComment": 87.947265625,
+              "widthDataType": 100.73779296875,
+              "widthDefault": 60
+            },
+            "id": "71926ea0-0380-4f0d-b53a-53ec69badfcc"
+          },
+          {
+            "name": "ProductCategoryID",
+            "comment": "ID Phụ lục SP",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 119.22216796875,
+              "widthComment": 82.58984375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1305b4ef-c9ca-4f0a-b521-c94b18a62387"
+          },
+          {
+            "name": "CategoryName",
+            "comment": "Tên Phụ lục SP",
+            "dataType": "NVARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 94.04736328125,
+              "widthComment": 90.84814453125,
+              "widthDataType": 100.73779296875,
+              "widthDefault": 60
+            },
+            "id": "56da9ce3-f328-4f91-b52f-8d09c126ecb8"
+          },
+          {
+            "name": "Price",
+            "comment": "Giá sản phẩm",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 85.9033203125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a659ff1a-9901-4021-9eec-e05907c73eb0"
+          },
+          {
+            "name": "SalesStartDate",
+            "comment": "Ngày BĐ bán",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 91.32421875,
+              "widthComment": 81.8154296875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8fa8455d-032f-40db-9d10-adbe47958276"
+          },
+          {
+            "name": "SalesEndDate",
+            "comment": "Ngày KT bán",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 85.408203125,
+              "widthComment": 79.15576171875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d48dd336-b588-46fa-89ce-1dde0b9bedaf"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 160.4,
+          "top": 200.8,
+          "zIndex": 3,
+          "widthName": 64.92431640625,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "d60e93b7-9e3e-4384-898c-df9b3e01a08f"
+      },
+      {
+        "name": "NHANVIEN",
+        "comment": "",
+        "columns": [
+          {
+            "name": "EmID",
+            "comment": "ID nhân viên",
+            "dataType": "CHAR(10)",
+            "default": "PK",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 79.37158203125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0b3dc111-9da6-4fe9-9bae-bc9288d3172b"
+          },
+          {
+            "name": "EmName",
+            "comment": "Tên nhân viên",
+            "dataType": "NVARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 87.6298828125,
+              "widthDataType": 100.73779296875,
+              "widthDefault": 60
+            },
+            "id": "834b0d53-3eba-4e72-b46b-9137b1caff6d"
+          },
+          {
+            "name": "Sex",
+            "comment": "Giới tính",
+            "dataType": "NVARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 93.57763671875,
+              "widthDefault": 60
+            },
+            "id": "1ef2a8e1-43f2-4aad-977d-b714a3e3191d"
+          },
+          {
+            "name": "TaxCode",
+            "comment": "Mẫ số thuế",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.02783203125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ead9c59d-0c10-4c56-945f-9e78ad17e882"
+          },
+          {
+            "name": "Email",
+            "comment": "Email",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 90.86083984375,
+              "widthDefault": 60
+            },
+            "id": "2b80e3d6-2b3f-4298-925d-e752427e3d03"
+          },
+          {
+            "name": "Address",
+            "comment": "Địa chỉ",
+            "dataType": "NVARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 93.57763671875,
+              "widthDefault": 60
+            },
+            "id": "12e86825-73e0-4c62-8486-b5b8af5d4d0e"
+          },
+          {
+            "name": "Salary",
+            "comment": "Lương",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cfd9fb16-624b-46c1-a0e2-2cd49c9602e0"
+          },
+          {
+            "name": "JobTitle",
+            "comment": "Chức vụ",
+            "dataType": "NVARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 93.57763671875,
+              "widthDefault": 60
+            },
+            "id": "d497537a-9bda-4c72-94f9-f9ae9aef87b5"
+          },
+          {
+            "name": "DepID",
+            "comment": "ID bộ phận",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 69.87548828125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c57deead-e0d0-4069-9153-0f1fdebc7148"
+          },
+          {
+            "name": "DepName",
+            "comment": "Tên bộ phận",
+            "dataType": "NVARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.47705078125,
+              "widthComment": 78.1337890625,
+              "widthDataType": 93.57763671875,
+              "widthDefault": 60
+            },
+            "id": "78aa289b-a43d-4ab4-887d-f0f1e77e0145"
+          },
+          {
+            "name": "StartDate",
+            "comment": "Ngày BĐ làm việc",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 108.18994140625,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "91e54c1b-49a8-435e-aa3b-11234ea40a83"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1108.4,
+          "top": 178,
+          "zIndex": 2,
+          "widthName": 69.01220703125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "70d22015-89fe-4ac2-ad05-58e95b6c155c"
+      },
+      {
+        "name": "HOADON",
+        "comment": "",
+        "columns": [
+          {
+            "name": "OrderID",
+            "comment": "ID Hóa đơn",
+            "dataType": "CHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 71.51318359375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5a4db6b1-737c-4b48-8740-27bd360bc29f"
+          },
+          {
+            "name": "OrderLine",
+            "comment": "Số ID",
+            "dataType": "INT",
+            "default": "PK",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.623046875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "839a61ba-c2b1-4c24-b3f1-8900caa7e9e8"
+          },
+          {
+            "name": "SaleID",
+            "comment": "ID nhân viên",
+            "dataType": "CHAR(10)",
+            "default": "PK",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 79.37158203125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "401304c3-9c52-4647-8070-74ae7fe57275"
+          },
+          {
+            "name": "ProductID",
+            "comment": "ID sản phẩm",
+            "dataType": "CHAR(10)",
+            "default": "PK",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 63.83251953125,
+              "widthComment": 79.68896484375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "abe30d74-56b6-4849-ab0e-e95d2519cef9"
+          },
+          {
+            "name": "CusID",
+            "comment": "ID Khách hàng",
+            "dataType": "CHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 91.6669921875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "931e895f-ec96-4345-9856-31ff1c5c1d0c"
+          },
+          {
+            "name": "Type",
+            "comment": "Kiểu mua hàng",
+            "dataType": "VARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 94.37109375,
+              "widthDataType": 83.70068359375,
+              "widthDefault": 60
+            },
+            "id": "1571d30d-a58d-44b2-b696-800c61bff381"
+          },
+          {
+            "name": "QTY",
+            "comment": "Số lượng",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "383809af-6c68-489a-a67f-d7124d350783"
+          },
+          {
+            "name": "Price",
+            "comment": "Đơn giá",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b86af423-e55b-46c0-bdfc-88d40c8c1bff"
+          },
+          {
+            "name": "TotalLine",
+            "comment": "Tổng giá trị ĐH",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 93.99658203125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e04a0439-74c3-43e4-8fd6-b9754fc54122"
+          },
+          {
+            "name": "DateCreate",
+            "comment": "Ngày tạo đơn",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 70.91015625,
+              "widthComment": 84.46875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "71783f4c-ff20-4beb-9b06-6d23556a8792"
+          },
+          {
+            "name": "OrderDate",
+            "comment": "Ngày đặt hàng",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66.8984375,
+              "widthComment": 91.9208984375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f75f3275-66eb-4dbb-b3c2-1159e962555c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 641.6,
+          "top": 643.6,
+          "zIndex": 1,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "4b98da0d-db85-4daf-abb4-b870e60b90b4"
+      }
+    ],
+    "indexes": [
+      {
+        "name": "",
+        "columns": [],
+        "unique": false,
+        "id": "4fc0dd59-123a-4498-b08d-44b2c6069e88",
+        "tableId": "d60e93b7-9e3e-4384-898c-df9b3e01a08f"
+      }
+    ]
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "70d22015-89fe-4ac2-ad05-58e95b6c155c",
+          "columnIds": [
+            "0b3dc111-9da6-4fe9-9bae-bc9288d3172b"
+          ],
+          "x": 1108.4,
+          "y": 325.25,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "4b98da0d-db85-4daf-abb4-b870e60b90b4",
+          "columnIds": [
+            "401304c3-9c52-4647-8070-74ae7fe57275"
+          ],
+          "x": 953.5864501953125,
+          "y": 643.6,
+          "direction": "top"
+        },
+        "constraintName": "fk_nhanvien_to_hoadon",
+        "visible": true,
+        "id": "4d5c5103-3177-48a3-ae01-140e47f29de2"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "d60e93b7-9e3e-4384-898c-df9b3e01a08f",
+          "columnIds": [
+            "9f0a7a20-9884-4db8-856c-870b3f108402"
+          ],
+          "x": 638.20810546875,
+          "y": 307.05,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "4b98da0d-db85-4daf-abb4-b870e60b90b4",
+          "columnIds": [
+            "abe30d74-56b6-4849-ab0e-e95d2519cef9"
+          ],
+          "x": 745.5954833984375,
+          "y": 643.6,
+          "direction": "top"
+        },
+        "constraintName": "fk_sanpham_to_hoadon",
+        "visible": true,
+        "id": "308ae1cc-c558-4ec8-a7f0-07ff9a512492"
+      }
+    ]
+  }
+}
