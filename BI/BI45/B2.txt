@@ -1,0 +1,64 @@
+Vấn đề: Lợi nhuận bán hàng trên landing page giảm 60% yoy 
+
+    - Làm rõ bằng business Understanding: 
+
+        + Bộ phận liên quan
+
+    - Liệt kê yêu cầu data
+
+-------------------------
+
+- Công ty về thương mại điện tử, không làm trên sàn thương mại điện tử
+
+- landing page:
+
+    + Web
+
+    + Chứa thông tin sản phẩm 
+
+    + Nơi giao dịch với khách hàng.
+
+- Vẽ sơ đồ mô hình hoạt động của sản phẩm
+
+- Vấn đề:
+
+    + Khách hàng truy cập:
+
+        - Khách hàng truy cập được landing page
+
+        - Thiết kế Web (con người)
+
+    + Đặt hàng:
+
+        - bấm chọn được không
+
+        - Điền thông tin khó khăn
+
+    + Xác nhận đơn hàng:
+
+        - mail xác nhận có được gửi (khách hàng có nhận được mail không)
+
+        - tỷ lệ nghe máy và không nghe máy hoặc không gọi.
+
+- Dữ liệu cần phân tích:
+
+    + Khách hàng truy cập:
+
+        - dữ liệu lượng truy cập
+
+        - dữ liệu khảo sát đọ hài lòng của khách hàng
+
+    + Đặt hàng:
+
+        - Làm việc với IT
+
+        - Lấy data khảo sát
+
+    + Xác nhận đơn hàng:
+     
+        - Dữ liệu mail gửi đi, dữ liệu mail có xác nhận
+
+        - dữ liệu cuộc gọi 
+
+
+
