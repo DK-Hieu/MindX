@@ -78,11 +78,71 @@ join B
 on A.Product_line = B.Product_line 
 where ((A.Order_count - B.Order_count < 0) and ( A.Sum_sales - B.Sum_sales > 0)) or 
       ((A.Order_count - B.Order_count > 0) and ( A.Sum_sales - B.Sum_sales < 0))
+      
+--------------------------------------------------------------------------------------------------------------------------------
+
+CREATE VIEW View_1 AS (
+    SELECT Product_line, 
+        Customer_type, 
+        ROUND(SUM(cogs),2) as 'SumSales', 
+        COUNT(Invoice_ID) as 'Total Order'
+    FROM supermarket_sales
+    GROUP BY Product_line, Customer_type 
+)
+
+WITH Info AS (
+	SELECT Product_line,
+	        MAX(SumSales) as 'MaxSales', 
+	        MAX([Total Order]) as 'MaxOrder'
+	FROM View_1
+	GROUP BY Product_line
+)
+SELECT *
+FROM View_1 A, Info B
+WHERE 
+    SumSales = MaxSales and [Total Order] < MaxOrder 
      
 -- Câu 4: Bạn hãy xây dựng đoạn truy vấn tìm ra tổng doanh số, tổng số đơn hàng theo tháng, tổng doanh số và tổng số đơn hàng của các tháng về trước (1đ)
 
-SELECT MONTH([Date]) 'Month_sales', round(sum(Unit_price*Quantity),2) 'Sum_sales', COUNT(Invoice_ID) 'Order_count',
-	   lag(round(sum(Unit_price*Quantity),2), 1,0) over (ORDER BY MONTH([Date])) AS Total_sale_before,
-	   lag(COUNT(Invoice_ID), 1,0) over (ORDER BY MONTH([Date])) as Total_order_before
-FROM supermarket_sales ss 
-group by MONTH([Date])
+
+with A as (    
+	SELECT MONTH([Date]) 'Month_sales', round(sum(Unit_price*Quantity),2) 'Sum_sales', COUNT(Invoice_ID) 'Order_count',
+		   lag(round(sum(Unit_price*Quantity),2), 1,0) over (ORDER BY MONTH([Date])) AS sale_before,
+		   lag(COUNT(Invoice_ID), 1,0) over (ORDER BY MONTH([Date])) as order_before
+	FROM supermarket_sales ss 
+	group by MONTH([Date]))
+SELECT *, sum(sale_before) over (ORDER BY Month_sales) as Total_sale_before, sum(order_before) over (ORDER BY Month_sales) as Total_order_before
+from A
+
+
+WITH X AS (
+SELECT 
+    DATEPART(M, [Date]) as [Month], 
+    ROUND(SUM(cogs),2) as [SumSales],
+    COUNT(Invoice_ID) as [TotalOrder]
+FROM supermarket_sales S
+GROUP BY DATEPART(M, [Date])
+)
+SELECT X1.*, 
+    (SELECT 
+        SUM(SumSales)
+    FROM X X2
+    WHERE X1.[Month] > X2.[Month]) AS [Total Sales Before], 
+    (SELECT 
+        SUM(TotalOrder)
+    FROM X X2
+    WHERE X1.[Month] > X2.[Month]) AS [Total OrderBefore]
+FROM X X1
+ORDER BY [Month]
+
+
+
+
+
+
+
+
+
+
+
+
