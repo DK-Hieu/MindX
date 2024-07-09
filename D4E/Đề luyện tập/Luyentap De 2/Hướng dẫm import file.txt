@@ -1,0 +1,3 @@
+_Hướng dẫn import data luyện tập
+	+Cách 1: sử dụng file bak và restore như cách đã học
+	+Cách 2: Sử dụng file code Data_SQL_Server.sql
