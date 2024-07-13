@@ -1,0 +1,14 @@
+# Câu 1: 
+    _ Tạo một ticker_list gồm AAA, CCL, DAG, HBC, HQC, IDI, PVC, SBT, SHI, TDC, TDH 
+    _ Thêm mã FPT vào ticker_list
+    _ Thay mã C32 vào từng vị trí của ticker_list và in ra kết quả
+        + Sử dụng hàm cho từng mã
+        + Sử dụng vòng lặp
+    _ Đổi các mã CCL, DAG, HBC, HQC, IDI thành ticker:
+        + Sử dụng hàm cho từng mã
+        + Sử dụng vòng lặp và hàm if
+    
+
+# Câu 2: Sử dụng vòng lặp để 
+    _ Viết Bảng cửu chương 2
+    _ Viết Bảng cửu chương từ 2-9

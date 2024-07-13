@@ -1,0 +1,39 @@
+ Sử dụng 2 file bctc và ami_price sẵn có
+# Câu 1: BCTC
+    _Mở 2 file bctc và ami bằng pd.read
+    _Xóa cột Unnamed: 0 bằng lệnh drop nếu có
+    _Tính và tạo cột theo công thức 
+        + Debt = bs_nvnh - bs_nvhd
+        + D/E = Debt / bs_vcsh
+        + Book_value = bs_tts - bs_tscdvh - bs_npt
+        + P/B = von_hoa / Book_value
+    _lọc ra những ticker có:
+        + Ngành cấp 1:
+            -Bất động sản
+            -Y tế
+            -Nguyên vật liệu
+        + Lọc những doanh nghiệp dựa trên câu lệnh sql sau, và đặt tên là bctc2:
+            select ticker, year, tier, von_hoa
+            from bctc 
+            where von_hoa > 10000000000000
+        + sử dụng lệnh len và unique() để đếm số mã ticker có trong bctc2
+    _tính trung bình Debt, D/E, Book_value, P/B, tier(count) theo:
+        + tier
+        + tier, year
+        + year, tier
+        (Sử dụng reset_index và không reset_index)
+        (cứ làm theo nhé để nhìn thấy sự khác biệt nhé)
+     
+
+# Câu 2: AMI
+    _tính trung bình theo ticker của giá Open, High, Low, Close
+    _tính tổng volume theo ticker
+    _Lọc theo câu lệnh sql sau:
+        select * from ami
+        where ticker = 'FPT' and date between '2021-01-01' and '2022-01-01'
+    _Tạo cột month dựa trên cột date
+    _Lọc dữ liệu và đặt tên là ami1 thỏa mãn yêu cầu:
+        + month = 1 
+        + year = 2022
+        + ticker = FPT
+    _Lấy ra giá Close ở vị trí thứ 5 của bảng dữ liệu ami1
