@@ -1,0 +1,42 @@
+Nguồn Data: Hãy chọn data theo lĩnh vực mà bạn hiểu hoặc thích
+	- Kaggle
+	- Google bigquery
+	- World bank
+	- FAO
+	- Tổng cục thống kê
+	...
+	- Cá nhân: 
+		+ dữ liệu do cá nhân sưu tập
+		+ dữ liệu modify từ data công việc
+Tool:
+	- không giới hạn
+	- nêu dùng từ 2 tool trở lên
+		+ Power BI
+Kích thước dataset: 
+	- Tối thiểu 2000 dòng 
+	- Nếu ít hơn 2000 dòng thì số cột phải lớn
+Trình bày:
+	- 1 Power BI (mức độ hoàn chỉnh tối thiếu > 60%)
+	- 1 power point, canvas .... (dùng để thuyết trình)
+		+ lưu ý:
+			- Màu sắc phải có màu chủ đạo tối đa chỉ 3 màu
+			- Cố gắng màu đồ thị bám sát màu chủ đạo
+			- Sau mỗi phần phân tích thì cần tổng hợp lại insight của phần đó (insight nhỏ)
+			- Từ các insight nhỏ => insight lớn (insight toàn bài)
+			- Dùng đúng biểu đồ
+	- Thuyết trình trong 15 phút
+	- không giới hạn số người trình bày
+Nộp bài: 
+	- tất cả các file (power bi, power point, sql, python)
+Hướng dẫn làm project:
+	_Đưa ra vấn đề dựa trên dataset 
+	_Thống kê cơ bản bộ dataset:
+		+ Giới thiệu về dataset
+		+ Khoanh vùng dữ liệu dùng để làm 
+		+ EDA data:
+			> Xử liệu dữ liệu null, sai type, ....
+			> kiểm tra về phân phối, thông kê dữ liệu
+			> Tính một số các chỉ tiêu cần thiết
+				= Dùng boxplot để check outline
+				= Sử dụng heatmap hay biểu đồ chấm bi (phải phối hợp với domain) để kiểm tra độ tương quan giữa các biến
+					và chọn ra nhưng biến có độ tương quan cao để phân tích
