@@ -1,6 +1,8 @@
-create DATABASE Mindx_Lec_D4E113
+drop table if exists Mindx_Lec_D4E114;
 
-use Mindx_Lec_D4E113
+create DATABASE Mindx_Lec_D4E114;
+
+use Mindx_Lec_D4E113;
 
 CREATE TABLE COURSE (
 	cID char(5) COLLATE Latin1_General_CI_AS NULL,
