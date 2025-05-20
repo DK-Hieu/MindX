@@ -57,7 +57,7 @@ INSERT INTO ENROLLMENTS (sID,cID,tID) VALUES
 	 (N'M0002',N'MC004',N'T0002'),
 	 (N'M0006',N'MC005',N'T0003');
 
-INSERT INTO MIndX_Lec_1.dbo.LEARNING (sID,cID,score) VALUES
+INSERT INTO LEARNING (sID,cID,score) VALUES
 	 (N'M0001',N'MC001',4.2),
 	 (N'M0002',N'MC002',3.8),
 	 (N'M0003',N'MC003',6.5),
@@ -69,7 +69,7 @@ INSERT INTO MIndX_Lec_1.dbo.LEARNING (sID,cID,score) VALUES
 	 (N'M0002',N'MC004',7.4),
 	 (N'M0006',N'MC005',5.5);
 
-INSERT INTO MIndX_Lec_1.dbo.STUDENTS (sID,sFirstName,sLastName,sPhone,sAddress) VALUES
+INSERT INTO STUDENTS (sID,sFirstName,sLastName,sPhone,sAddress) VALUES
 	 (N'M0001',N'Minh',N'Nguyen',N'0323456789',N'Quang Binh'),
 	 (N'M0002',N'Hai',N'Do',N'0143456789',N'Ha Nôi'),
 	 (N'M0003',N'Bao',N'Nguyen',N'0123656789',N'Quang Binh'),
@@ -78,7 +78,7 @@ INSERT INTO MIndX_Lec_1.dbo.STUDENTS (sID,sFirstName,sLastName,sPhone,sAddress) 
 	 (N'M0006',N'Giau',N'Le',N'0723456459',N'Binh Phuoc'),
 	 (N'M0007',N'Khoa',N'Tran',N'0343452780',N'Dong Nai');
 
-INSERT INTO MIndX_Lec_1.dbo.TEACHERS (tID,tFirstName,tLastName,tPhone,tType,tMajor) VALUES
+INSERT INTO TEACHERS (tID,tFirstName,tLastName,tPhone,tType,tMajor) VALUES
 	 (N'T0003',N'Khoa',N'Dao',N'0113656789',0,N'Data'),
 	 (N'T0005',N'Nghia',N'Cao',N'0562456590',0,N'Data'),
 	 (N'T0006',N'Ha',N'San',N'0783456459',1,N'Data');
