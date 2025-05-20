@@ -1,3 +1,7 @@
+create DATABASE Mindx_Lec_D4E113
+
+use Mindx_Lec_D4E113
+
 CREATE TABLE COURSE (
 	cID char(5) COLLATE Latin1_General_CI_AS NULL,
 	cMajor varchar(10) COLLATE Latin1_General_CI_AS NULL,
