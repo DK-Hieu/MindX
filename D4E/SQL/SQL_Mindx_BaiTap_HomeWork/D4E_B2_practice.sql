@@ -1,3 +1,16 @@
+alter table dbo.COURSE 
+alter column cID varchar(50) NOT NULL 
+
+alter table dbo.COURSE
+add primary key (cID)
+
+alter table dbo.ENROLLMENTS 
+alter column cID varchar(50)
+
+alter table dbo.ENROLLMENTS
+ADD CONSTRAINT FK_Couse_Enroll
+FOREIGN KEY (cID) REFERENCES dbo.COURSE(cID);
+
 -- Bạn hãy tìm ra những giảng viên là Super Teacher của khoa Data
 
 SELECT * 
