@@ -2,7 +2,7 @@ drop table if exists Mindx_Lec_D4E114;
 
 create DATABASE Mindx_Lec_D4E114;
 
-use Mindx_Lec_D4E113;
+use Mindx_Lec_D4E114;
 
 CREATE TABLE COURSE (
 	cID char(5) COLLATE Latin1_General_CI_AS NULL,
