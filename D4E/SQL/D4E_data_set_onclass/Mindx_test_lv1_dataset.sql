@@ -1,4 +1,6 @@
-CREATE DATABASE Mindx_test
+DROP DATABASE IF EXISTS Mindx_test;
+
+CREATE DATABASE Mindx_test;
 
 -- Mindx_test.dbo.supersales definition
 
