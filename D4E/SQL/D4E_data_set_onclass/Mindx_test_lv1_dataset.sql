@@ -1,3 +1,5 @@
+CREATE DATABASE Mindx_test
+
 -- Mindx_test.dbo.supersales definition
 
 -- Drop table
