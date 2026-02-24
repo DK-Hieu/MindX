@@ -5,39 +5,39 @@ create DATABASE Mindx_Lec_D4E114;
 use Mindx_Lec_D4E114;
 
 CREATE TABLE COURSE (
-	cID char(5) COLLATE Latin1_General_CI_AS NULL,
-	cMajor varchar(10) COLLATE Latin1_General_CI_AS NULL,
-	cName varchar(30) COLLATE Latin1_General_CI_AS NULL
+	cID char(5) ,
+	cMajor varchar(10) ,
+	cName varchar(30) 
 );
 
 CREATE TABLE ENROLLMENTS (
-	sID char(5) COLLATE Latin1_General_CI_AS NOT NULL,
-	cID char(5) COLLATE Latin1_General_CI_AS NOT NULL,
-	tID char(5) COLLATE Latin1_General_CI_AS NULL
+	sID char(5) ,
+	cID char(5) ,
+	tID char(5) 
 );
 
 CREATE TABLE LEARNING (
-	sID char(5) COLLATE Latin1_General_CI_AS NOT NULL,
-	cID char(5) COLLATE Latin1_General_CI_AS NOT NULL,
+	sID char(5) ,
+	cID char(5) ,
 	score float NOT NULL
 );
 
 
 CREATE TABLE STUDENTS (
-	sID char(5) COLLATE Latin1_General_CI_AS NULL,
-	sFirstName varchar(10) COLLATE Latin1_General_CI_AS NULL,
-	sLastName varchar(10) COLLATE Latin1_General_CI_AS NULL,
-	sPhone char(10) COLLATE Latin1_General_CI_AS NULL,
-	sAddress varchar(50) COLLATE Latin1_General_CI_AS NULL
+	sID char(5) ,
+	sFirstName varchar(10) ,
+	sLastName varchar(10) ,
+	sPhone char(10) ,
+	sAddress varchar(50) 
 );
 
 CREATE TABLE TEACHERS (
-	tID char(5) COLLATE Latin1_General_CI_AS NULL,
-	tFirstName varchar(10) COLLATE Latin1_General_CI_AS NULL,
-	tLastName varchar(10) COLLATE Latin1_General_CI_AS NULL,
-	tPhone char(10) COLLATE Latin1_General_CI_AS NULL,
+	tID char(5) ,
+	tFirstName varchar(10) ,
+	tLastName varchar(10) ,
+	tPhone char(10) ,
 	tType int NULL,
-	tMajor varchar(10) COLLATE Latin1_General_CI_AS NULL
+	tMajor varchar(10) 
 );
 
 INSERT INTO COURSE (cID,cMajor,cName) VALUES
